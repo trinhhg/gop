@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter Merge Tool</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.min.js"></script>
+</head>
+<body>
+  <h1>Chapter Merge Tool</h1>
+  <div class="controls">
+    <input id="title" placeholder="Tiêu đề chương">
+    <textarea id="content" placeholder="Nội dung chương"></textarea>
+    <button onclick="AppAPI.addChapter()">Thêm</button>
+    <button onclick="AppAPI.mergeAll()">Gộp tất cả</button>
+    <button onclick="AppAPI.exportZip()">Tải toàn bộ (.zip)</button>
+    <button onclick="AppAPI.undo()">Hoàn tác</button>
+    <button onclick="AppAPI.redo()">Redo</button>
+  </div>
+  <div id="chapters"></div>
+<script src="main.js"></script>
+<script src="modules/mergeChapters.js"></script>
+<script src="modules/exportDocx.js"></script>
+<script src="modules/exportZip.js"></script>
+</body>
+</html>
